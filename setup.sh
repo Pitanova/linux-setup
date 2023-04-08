@@ -11,4 +11,10 @@ do
     fi
 done
 
-echo "This is a test print"
+echo "NOTE: Download flatpak and Nerd Fonts before using this script!"
+sleep 1
+
+echo "What are you downloading?"
+echo "A) Terminal Apps"
+echo "B) Flatpak Apps"
+echo "Gaming Apps"
