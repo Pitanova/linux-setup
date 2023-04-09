@@ -1,14 +1,16 @@
 #!/bin/bash
 
 declare -A osInfo;
+#Of course Pop OS has to be different :P
+osInfo[/etc/issue]="apt-get install -y"
 osInfo[/etc/debian-version]="apt-get install -y"
 osInfo[/etc/fedora-release]="dnf install -y"
 
 for f in ${!osInfo[@]}
 do
     if [[ -f $f ]];then
-	package_manager=${osInfo[$f]}
-    fi
+	    package_manager=${osInfo[$f]}
+	fi
 done
 
 echo "NOTE: Download flatpak and Nerd Fonts before using this script!"
@@ -18,7 +20,7 @@ echo "What are you downloading?"
 echo "A) Terminal Apps"
 echo "B) Flatpak Apps"
 echo "C) Gaming Apps"
-echo -n "[A/B/C]: "
+echo -n ": "
 read choice
 
 LIST_OF_TERMAPPS="btop \
@@ -38,15 +40,13 @@ LIST_OF_FLATPAKS="com.bitwarden.desktop \
 		    	  org.videolan.VLC \
 		  		  com.visualstudio.code"
 
-flatpak_manager=$(flatpak install flathub -y --noninteractive)
-
 case $choice in
     A|a)
     ${package_manager} $LIST_OF_TERMAPPS
     ;;
     B|b)
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    ${flatpak_manager} $LIST_OF_FLATPAKS
+	flatpak install flathub -y --noninteractive $LIST_OF_FLATPAKS
     ;;
     C|c)
     echo "This is still being worked on..."
