@@ -26,33 +26,33 @@ echo -n "[A/B/C]: "
 read choice
 
 LIST_OF_DEF_TERMAPPS="btop \
-	          	  neofetch \
-		  		  git \
-		  		  tmux"
+	              neofetch \
+		      git \
+		      tmux"
 
 LIST_OF_DEF_FLATPAKS="com.bitwarden.desktop \
-	          	  com.usebottles.bottles \
-		  		  com.discordapp.Discord \
-		  		  com.mattjakeman.ExtensionManager \
-		  		  org.flameshot.Flameshot \
-		  		  com.github.tchx84.Flatseal \
-				  com.heroicgameslauncher.hgl \
-		  		  org.localsend.localsend_app \
-				  com.valvesoftware.Steam \
-		  		  org.telegram.desktop \
-		    	  org.videolan.VLC \
-		  		  com.visualstudio.code"
+	              com.usebottles.bottles \
+                      com.discordapp.Discord \
+		      com.mattjakeman.ExtensionManager \
+		      org.flameshot.Flameshot \
+		      com.github.tchx84.Flatseal \
+		      com.heroicgameslauncher.hgl \
+		      org.localsend.localsend_app \
+		      com.valvesoftware.Steam \
+		      org.telegram.desktop \
+		      org.videolan.VLC \
+		      com.visualstudio.code"
 
 LIST_OF_EXTRA_TERMAPPS="piper \
-						virt-manager"
+			virt-manager"
 
 LIST_OF_EXTRA_FLATPAKS="net.davidotek.pupgui2 \
-					com.leinardi.gwe \
-					org.openrgb.OpenRGB \
-					com.brave.Browser \
-					com.dec05eba.gpu_screen_recorder \
-					org.kde.kdenlive \
-					hu.kramo.Cartridges"
+			com.leinardi.gwe \
+			org.openrgb.OpenRGB \
+			com.brave.Browser \
+			com.dec05eba.gpu_screen_recorder \
+			org.kde.kdenlive \
+			hu.kramo.Cartridges"
 
 case $choice in
     A|a)
