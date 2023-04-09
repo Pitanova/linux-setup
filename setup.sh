@@ -18,10 +18,6 @@ echo "NOTE: Download flatpak and Nerd Fonts before using this script!"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sleep 1
 
-#TODO: Download all relevant stuff to the machine
-
-#TODO: Create a division for extra desktop programs 
-
 echo "How would you like to set up your system?"
 echo "A) Default Apps"
 echo "B) Extra Desktop Apps"
@@ -55,7 +51,8 @@ LIST_OF_EXTRA_FLATPAKS="net.davidotek.pupgui2 \
 					org.openrgb.OpenRGB \
 					com.brave.Browser \
 					com.dec05eba.gpu_screen_recorder \
-					org.kde.kdenlive"
+					org.kde.kdenlive \
+					hu.kramo.Cartridges"
 
 case $choice in
     A|a)
